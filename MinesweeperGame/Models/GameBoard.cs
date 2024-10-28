@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MinesweeperGame.Interfaces;
 
 namespace MinesweeperGame.Models
@@ -60,13 +61,15 @@ namespace MinesweeperGame.Models
                     throw new ArgumentException("Invalid number of mines.");
                 }
 
+                HashSet<(int, int)> minePositions = new HashSet<(int, int)>();
                 int placedMines = 0;
+
                 while (placedMines < numberOfMines)
                 {
                     int row = _rand.Next(_rows);
                     int column = _rand.Next(_columns);
 
-                    if (_board[row, column] != 1)
+                    if (minePositions.Add((row, column)))
                     {
                         _board[row, column] = 1;
                         placedMines++;
