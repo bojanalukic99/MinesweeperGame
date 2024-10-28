@@ -1,0 +1,42 @@
+# Build Folders
+bin/
+obj/
+
+# Rider-specific files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# NuGet Packages
+*.nupkg
+# Paket folder se može ignorisati zbog 'restore' opcije u dotnet CLI i msbuild.
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+!**/[Pp]ackages/repositories.config
+
+# Entity Framework
+*.edmx.sql
+*.sql
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.bak
+*.swp
+*.tmp
+*.TMP
